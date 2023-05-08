@@ -1,4 +1,6 @@
-﻿using Microsoft.Win32;
+﻿///реализация простой базы данных ювелирных изделии
+///author Maltseva K.V.
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -155,6 +157,10 @@ namespace JewelryDateBase
         private void DeleteAllBase_Click(object sender, RoutedEventArgs e)
         {
             Button_Delete_All_Click(sender, e);
+        }
+        private void Author_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("author Maltseva K.V.");
         }
     }
 }

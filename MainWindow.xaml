@@ -17,12 +17,15 @@
                 <MenuItem Header="Добавить" Click="Add_Click"/>
                 <MenuItem Header="Удалить изделие" Click="DeleteOne_Click"/>
                 <MenuItem Header="Удалить базу" Click="DeleteAllBase_Click"/>
+                
             </MenuItem>
-
+            <MenuItem Header="Справка">
+                <MenuItem Header="Об авторе" Click="Author_Click" />
+            </MenuItem>
         </Menu>
         <Button x:Name="Button_Add" Content="Добавить" HorizontalAlignment="Left" Margin="44,54,0,0" VerticalAlignment="Top" Click="Button_Add_Click" Width="68"/>
         <Button x:Name="Button_Save" Content="Сохранить" HorizontalAlignment="Left" Margin="44,20,0,0" VerticalAlignment="Top" Click="Button_Save_Click" Width="68"/>
-        <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,108,0,0"/>
+        <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="0,108,0,0"/>
         <Button x:Name="Button_Load" Content=" Открыть" HorizontalAlignment="Left" Margin="126,20,0,0" VerticalAlignment="Top" Width="66" Click="Button_Load_Click"/>
         <Button x:Name="Button_Delete" Content="Удалить изделие" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Click="Button_Delete_Click"/>
         <Button x:Name="Button_Delete_All" Content="Удалить базу" HorizontalAlignment="Center" Margin="0,54,0,0" VerticalAlignment="Top" Width="96" Click="Button_Delete_All_Click"/>

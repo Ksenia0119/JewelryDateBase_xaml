@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+///реализация простой базы данных ювелирных изделии
+///author Maltseva K.V.
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
