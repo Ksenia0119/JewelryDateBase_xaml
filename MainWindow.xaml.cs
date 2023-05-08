@@ -19,9 +19,9 @@ using System.Windows.Shapes;
 
 namespace JewelryDateBase
 {
-    /// <summary>
+   
     /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
         ///поле хранит имя файла для работы 
@@ -30,35 +30,22 @@ namespace JewelryDateBase
         ///cсылка на объект класса base_jewerly
         public base_jewerly jew = new base_jewerly();
 
+       // Конструктор класса MainWindow
         public MainWindow()
-        {
+        {   // инициализация компонентов окна
             InitializeComponent();
+            // источник данных для таблицы
             datagrid.ItemsSource = jew.jewerlys;
         }
 
-
-     
-
-      
-     
-
-
-        //private void Button_Search_Click(object sender, RoutedEventArgs e)
-        //{
-        //    FormSearch FS = new FormSearch();
-        //    FS.Owner = this;
-        //    FS.Show();
-        //}
-
-     
-
+        //обработчик кнопки добавить-создание второго окна,передача управления
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
             AddNewJewelry addform = new AddNewJewelry();
             addform.Owner = this;
             addform.Show();
         }
-
+          //сохранение бд в фаил
         private void Button_Save_Click(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
@@ -70,7 +57,7 @@ namespace JewelryDateBase
             }
             jew.SaveDB(filename);
         }
-
+        //загрузка бд из файла
         private void Button_Load_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -82,14 +69,14 @@ namespace JewelryDateBase
 
             }
         }
-
+        //удаление одного экземпляра из бд
         private void Button_Delete_Click(object sender, RoutedEventArgs e)
         {
             int ind = datagrid.SelectedIndex;
             jew.jewerlys.RemoveAt(ind);
 
         }
-
+         //удаление всей бд
         private void Button_Delete_All_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show(" Вы уверены, что желаете удалить базу данных? Удаление базы данных нельзя отменить.", "Удаление базы данных", MessageBoxButton.OKCancel);
@@ -97,22 +84,20 @@ namespace JewelryDateBase
             {
                 jew.jewerlys.Clear();
             }
-
-
-            //jew.jewerlys.Clear();
         }
 
-
+        //  счетчик кликов на кнопку
         int countckick = 0;
+         //сортировка по названию изделия
         private void Button_Sort_Name_Click(object sender, RoutedEventArgs e)
         {
-            countckick++; // увеличиваем счетчик на 1 при каждом нажатии на кнопку
+            countckick++; 
 
-            // проверяем значение счетчика и выполняем соответствующее действие
+           
             if (countckick == 1)
             {
-                //создаем обьект класса SortDescription . сортируем по столбцу "Author" по возрастанию
-                var sortByName = new SortDescription("Name", ListSortDirection.Ascending);
+                //создаем обьект класса SortDescription . сортируем по столбцу  по возрастанию
+                var sortByName = new SortDescription("Название", ListSortDirection.Ascending);
                 //применяем сортировку
                 datagrid.Items.SortDescriptions.Add(sortByName);
                 //обновляем данные в таблице
@@ -120,8 +105,8 @@ namespace JewelryDateBase
             }
             else if (countckick == 2)
             {
-                //создаем обьект класса SortDescription . сортируем по столбцу "Author" по возрастанию
-                var sortByName = new SortDescription("Name", ListSortDirection.Descending);
+                //создаем обьект класса SortDescription . сортируем по столбцу по убыванию
+                var sortByName = new SortDescription("Название", ListSortDirection.Descending);
                 //удаление сущ.фильтрации
                 datagrid.Items.SortDescriptions.Clear();
                 //применяем сортировку
@@ -136,28 +121,34 @@ namespace JewelryDateBase
                 datagrid.Items.SortDescriptions.Clear();
             }
         }
+        //меню-открыть бд
         private void Open_Click(object sender, RoutedEventArgs e)
         {
             Button_Load_Click(sender, e);
 
 
         }
+       // меню-сохранить бд
         private void Save_Click(object sender, RoutedEventArgs e)
         {
             Button_Save_Click(sender, e);
         }
+       // меню-добавить изделие
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             Button_Add_Click(sender, e);
         }
+        //меню-удалить экземляр в бд
         private void DeleteOne_Click(object sender, RoutedEventArgs e)
         {
             Button_Delete_Click(sender,e);
         }
+        //меню-удалить бд
         private void DeleteAllBase_Click(object sender, RoutedEventArgs e)
         {
             Button_Delete_All_Click(sender, e);
         }
+       // меню-автор
         private void Author_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("author Maltseva K.V.");

@@ -12,23 +12,24 @@ using System.Threading.Tasks;
 using System.Windows.Media.Media3D;
 
 namespace JewelryDateBase
-{
+{ //классс для работы с бд
     public class base_jewerly
     {
+        //коллекцию объектов Jewerly
         public ObservableCollection<Jewerly> jewerlys;
 
-
+       // конструктор
         public base_jewerly()
         {
             jewerlys = new ObservableCollection<Jewerly>();
         }
-
+        //добавления нового объекта  в коллекцию jewerlys
         public void AddNewJewerlys(string name, string type, string composition, double weight, double price)
         {
             Jewerly new_jew = new Jewerly(name, type, composition, weight, price);
             jewerlys.Add(new_jew);
         }
-
+        //сохранить бд
         public void SaveDB(string name)
         {
             ///Почитать
@@ -42,15 +43,15 @@ namespace JewelryDateBase
         }
 
         /// Открыть БД из файла
-        public void OpenFile(string name1)
+        public void OpenFile(string name_file)
         {
-            if (!System.IO.File.Exists(name1))
+            if (!System.IO.File.Exists(name_file))
                 throw new Exception("Файл не существует");
 
             if (jewerlys.Count != 0)
                 DeleteDB();
 
-            using (StreamReader sw = new StreamReader(name1))
+            using (StreamReader sw = new StreamReader(name_file))
             {
                 while (!sw.EndOfStream)
                 {
@@ -67,7 +68,7 @@ namespace JewelryDateBase
                 }
             }
         }
-
+        //удалить бд
         public void DeleteDB()
         {
           jewerlys.Clear();

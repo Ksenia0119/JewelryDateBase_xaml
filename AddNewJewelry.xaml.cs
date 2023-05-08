@@ -23,16 +23,16 @@ namespace JewelryDateBase
     /// </summary>
     public partial class AddNewJewelry : Window
     {
-
+        //Конструктор класса
         public AddNewJewelry()
-        {
+        {   //инициализация компонентов окна
             InitializeComponent();
             // Установка  фокуса  в true для кнопки Button_AddNew 
             Button_AddNew.Focusable = true;
             // Добавление обработчика нажатия
             PreviewKeyDown += AddNewJewelry_PreviewKeyDown;
         }
-
+        //горячая клавиша-добавить
         private void AddNewJewelry_PreviewKeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
@@ -41,7 +41,7 @@ namespace JewelryDateBase
                 Button_AddNew_Click(null, null);
             }
         }
-
+          //добавить изделие
         private void Button_AddNew_Click(object sender, RoutedEventArgs e)
         {
 
@@ -159,7 +159,7 @@ namespace JewelryDateBase
             }
 
         }
-
+         // проверка вводимых данных при добавлении изделия
         private bool check_input()
         {
             SolidColorBrush error_color = new SolidColorBrush();
@@ -233,7 +233,7 @@ namespace JewelryDateBase
      
 
     }
-
+      //закрыть форму
     private void Button_close_Click(object sender, RoutedEventArgs e)
         {
             Close();

@@ -118,5 +118,8 @@
   <ItemGroup>
     <Resource Include="Фон2.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="diamond_icon-icons.com_53145.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

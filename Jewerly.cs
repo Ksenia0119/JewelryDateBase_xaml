@@ -1,12 +1,5 @@
-﻿
-///реализация простой базы данных ювелирных изделии
+﻿///реализация простой базы данных ювелирных изделии
 ///author Maltseva K.V.
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace JewelryDateBase
 {
@@ -21,7 +14,7 @@ namespace JewelryDateBase
         double price;       ///Цена
 
 
-
+        //Конструктор класса
         public Jewerly(string name, string type, string composition, double weight, double price)
 
         {
@@ -31,31 +24,33 @@ namespace JewelryDateBase
             this.weight = weight;
             this.price = price;
         }
-        public string Name
+
+        //задать и получить Название
+        public string Название
         {
             get { return name; }
             set { name = value; }
         }
-
-        public string Type
+        //задать и получить Тип
+        public string Тип
         {
             get { return type; }
             set { type = value; }
         }
-
-        public string Composition
+        //задать и получить Состав
+        public string Состав
         {
             get { return composition; }
             set { composition = value; }
         }
-
-        public double Weight
+        //задать и получить Вес
+        public double Вес
         {
             get { return weight; }
             set { weight = value; }
         }
-
-        public double Price
+        //задать и получить Цена
+        public double Цена
         {
             get { return price; }
             set { price = value; }
