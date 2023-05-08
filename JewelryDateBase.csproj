@@ -103,5 +103,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ring_gift_valentine_romantic_love_diamond_proposal_valentines_day_icon_233315.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Фон_ювелирные_изделия.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Фон.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Фон2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

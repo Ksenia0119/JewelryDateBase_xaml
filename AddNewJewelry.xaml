@@ -5,23 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JewelryDateBase"
         mc:Ignorable="d"
-        Title="AddNewJewelry" Height="392" Width="427">
-    <Grid Margin="0,0,-35,0">
-        <StackPanel HorizontalAlignment="Left" Orientation="Vertical" VerticalAlignment="Top" Margin="25,13,0,0">
+        Title="Добавьте новое изделие" Height="400" Width="430" MinWidth="430" MaxWidth="430" MinHeight="400" MaxHeight="400">
+    <Window.Background>
+        <ImageBrush ImageSource="/Фон2.jpg"/>
+    </Window.Background>
+    <Grid Margin="0,0,10,2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="19*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel HorizontalAlignment="Left" Orientation="Vertical" VerticalAlignment="Top" Margin="28,18,0,0" Grid.ColumnSpan="2">
             <Label Content="Название:" Height="27" Width="120"/>
             <TextBox x:Name="TextBox_name" TextWrapping="Wrap" Text="1" Width="120" />
             <Label Content="Тип изделия:" Height="30" Width="120" RenderTransformOrigin="0.239,-0.419"/>
             <TextBox x:Name="TextBox_type" TextWrapping="Wrap" Text="1" Width="120" />
             <Label Content="Состав:" Height="30" Width="120" RenderTransformOrigin="0.51,-0.585"/>
             <TextBox x:Name="TextBox_composition" TextWrapping="Wrap" Text="1" Width="120"/>
-            <Label Content="Вес:" Height="30" Width="120"/>
+            <Label Content="Вес/грамм:" Height="30" Width="120"/>
             <TextBox x:Name="TextBox_weight" TextWrapping="Wrap" Text="1" Width="120"/>
-            <Label Content="Цена:" Height="30" Width="120"/>
+            <Label Content="Цена/руб.:" Height="30" Width="120"/>
             <TextBox x:Name="TextBox_price" TextWrapping="Wrap" Text="1" Width="120"/>
         </StackPanel>
-        <Button x:Name="Button_AddNew" Content="OK" HorizontalAlignment="Left" Margin="25,278,0,0" VerticalAlignment="Top" Click="Button_AddNew_Click" Width="58"/>
-        <Button x:Name="Button_close" Content="Закрыть" HorizontalAlignment="Left" Margin="92,278,0,0" VerticalAlignment="Top" Click="Button_close_Click" Width="53"/>
-        <TextBlock x:Name="TextBlock_erorr" HorizontalAlignment="Left" Margin="25,317,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.579"/>
+        <Button x:Name="Button_AddNew" Content="OK" HorizontalAlignment="Left" Margin="28,283,0,0" VerticalAlignment="Top" Click="Button_AddNew_Click" Width="58" Grid.ColumnSpan="2"/>
+        <Button x:Name="Button_close" Content="Закрыть" HorizontalAlignment="Left" Margin="38,283,0,0" VerticalAlignment="Top" Click="Button_close_Click" Width="53" Grid.Column="1"/>
+        <TextBlock x:Name="TextBlock_erorr" HorizontalAlignment="Left" Margin="28,336,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.422,0.579" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>
