@@ -72,9 +72,12 @@ namespace JewelryDateBase
         //удаление одного экземпляра из бд
         private void Button_Delete_Click(object sender, RoutedEventArgs e)
         {
-            int ind = datagrid.SelectedIndex;
-            jew.jewerlys.RemoveAt(ind);
-
+            MessageBoxResult result = MessageBox.Show(" Вы уверены, что желаете удалить изделие?", "Удаление изделия из базы данных", MessageBoxButton.OKCancel);
+            if (result == MessageBoxResult.OK)
+            {
+                int ind = datagrid.SelectedIndex;
+                jew.jewerlys.RemoveAt(ind);
+            }
         }
          //удаление всей бд
         private void Button_Delete_All_Click(object sender, RoutedEventArgs e)
@@ -93,7 +96,6 @@ namespace JewelryDateBase
         {
             countckick++; 
 
-           
             if (countckick == 1)
             {
                 //создаем обьект класса SortDescription . сортируем по столбцу  по возрастанию
@@ -105,7 +107,7 @@ namespace JewelryDateBase
             }
             else if (countckick == 2)
             {
-                //создаем обьект класса SortDescription . сортируем по столбцу по убыванию
+                //создаем обьект класса SortDescription . сортируем по столбцу по 
                 var sortByName = new SortDescription("Название", ListSortDirection.Descending);
                 //удаление сущ.фильтрации
                 datagrid.Items.SortDescriptions.Clear();
