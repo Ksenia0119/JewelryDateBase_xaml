@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JewelryDateBase"
         mc:Ignorable="d"
-        Title="База данных ювелирных изделий" Height="450" Width="800" Icon="/diamond.png" HorizontalAlignment="Center" MinWidth="800" MinHeight="450" MaxHeight="450" MaxWidth="800">
+        Title="База данных ювелирных изделий" Height="450" Width="800" Icon="/diamond.png" HorizontalAlignment="Center" MinWidth="800" MinHeight="450" MaxHeight="450" MaxWidth="800" FontFamily="Segoe UI Variable Text Semibold">
     <Window.Background>
         <ImageBrush ImageSource="/Фон.jpg" TileMode="Tile" Stretch="Fill"/>
     </Window.Background>
@@ -16,13 +16,15 @@
             <ColumnDefinition Width="10*"/>
             <ColumnDefinition Width="14*"/>
             <ColumnDefinition Width="4*"/>
-            <ColumnDefinition Width="26*"/>
-            <ColumnDefinition Width="125*"/>
+            <ColumnDefinition Width="11*"/>
+            <ColumnDefinition Width="15*"/>
+            <ColumnDefinition Width="16*"/>
+            <ColumnDefinition Width="109*"/>
             <ColumnDefinition Width="125*"/>
             <ColumnDefinition Width="22*"/>
             <ColumnDefinition Width="472*"/>
         </Grid.ColumnDefinitions>
-        <Menu Grid.ColumnSpan="9">
+        <Menu Grid.ColumnSpan="11">
             <Menu.Background>
                 <ImageBrush/>
             </Menu.Background>
@@ -42,12 +44,12 @@
                 <MenuItem Header="Об авторе" Click="Author_Click" />
             </MenuItem>
         </Menu>
-        <Button x:Name="Button_Add" Content="Добавить" HorizontalAlignment="Left" Margin="14,54,0,0" VerticalAlignment="Top" Click="Button_Add_Click" Width="68" Grid.Column="4" Grid.ColumnSpan="2"/>
-        <Button x:Name="Button_Save" Content="Сохранить" HorizontalAlignment="Left" Margin="14,20,0,0" VerticalAlignment="Top" Click="Button_Save_Click" Width="68" Grid.Column="4" Grid.ColumnSpan="2"/>
-        <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="14,108,75,19" Grid.ColumnSpan="5" Grid.Column="4"/>
-        <Button x:Name="Button_Load" Content=" Открыть" HorizontalAlignment="Left" Margin="70,20,0,0" VerticalAlignment="Top" Width="66" Click="Button_Load_Click" Grid.ColumnSpan="2" Grid.Column="5"/>
-        <Button x:Name="Button_Delete" Content="Удалить изделие" HorizontalAlignment="Left" Margin="24,20,0,0" VerticalAlignment="Top" Click="Button_Delete_Click" Grid.Column="8"/>
-        <Button x:Name="Button_Delete_All" Content="Удалить базу" HorizontalAlignment="Left" Margin="24,54,0,0" VerticalAlignment="Top" Width="96" Click="Button_Delete_All_Click" Grid.Column="8"/>
-        <Button x:Name="Button_Sort_Name" Content="Сортировать изделие" HorizontalAlignment="Left" Margin="274,20,0,0" VerticalAlignment="Top" Click="Button_Sort_Name_Click" Grid.Column="8"/>
+        <Button x:Name="Button_Add" Content="Добавить" HorizontalAlignment="Left" Margin="3,54,0,0" VerticalAlignment="Top" Click="Button_Add_Click" Width="68" Grid.Column="5" Grid.ColumnSpan="3"/>
+        <Button x:Name="Button_Save" Content="Сохранить" HorizontalAlignment="Left" Margin="3,20,0,0" VerticalAlignment="Top" Click="Button_Save_Click" Width="68" Grid.Column="5" Grid.ColumnSpan="3"/>
+        <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="3,108,75,19" Grid.ColumnSpan="6" Grid.Column="5"/>
+        <Button x:Name="Button_Load" Content=" Открыть" HorizontalAlignment="Left" Margin="54,20,0,0" VerticalAlignment="Top" Width="66" Click="Button_Load_Click" Grid.ColumnSpan="2" Grid.Column="7"/>
+        <Button x:Name="Button_Delete" Content="Удалить изделие" HorizontalAlignment="Left" Margin="24,20,0,0" VerticalAlignment="Top" Click="Button_Delete_Click" Grid.Column="10"/>
+        <Button x:Name="Button_Delete_All" Content="Удалить базу" HorizontalAlignment="Left" Margin="24,54,0,0" VerticalAlignment="Top" Width="96" Click="Button_Delete_All_Click" Grid.Column="10"/>
+        <Button x:Name="Button_Sort_Name" Content="Сортировать изделие" HorizontalAlignment="Left" Margin="274,20,0,0" VerticalAlignment="Top" Click="Button_Sort_Name_Click" Grid.Column="10"/>
     </Grid>
 </Window>

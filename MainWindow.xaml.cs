@@ -107,7 +107,7 @@ namespace JewelryDateBase
             }
             else if (countckick == 2)
             {
-                //создаем обьект класса SortDescription . сортируем по столбцу по 
+                //создаем обьект класса SortDescription . сортируем по столбцу по убыванию
                 var sortByName = new SortDescription("Название", ListSortDirection.Descending);
                 //удаление сущ.фильтрации
                 datagrid.Items.SortDescriptions.Clear();
@@ -153,7 +153,7 @@ namespace JewelryDateBase
        // меню-автор
         private void Author_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("author Maltseva K.V.");
+            MessageBox.Show("@author Maltseva K.V.");
         }
     }
 }
