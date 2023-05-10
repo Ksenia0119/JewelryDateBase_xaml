@@ -15,7 +15,7 @@ namespace JewelryDateBase
 { //классс для работы с бд
     public class base_jewerly
     {
-        //коллекцию объектов Jewerly
+        // коллекция jewerlys объектов типа Jewerly
         public ObservableCollection<Jewerly> jewerlys;
 
        // конструктор

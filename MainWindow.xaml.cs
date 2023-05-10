@@ -38,7 +38,7 @@ namespace JewelryDateBase
             datagrid.ItemsSource = jew.jewerlys;
         }
 
-        //обработчик кнопки добавить-создание второго окна,передача управления
+        //обработчик кнопки добавить-создание второго окна
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
             AddNewJewelry addform = new AddNewJewelry();
