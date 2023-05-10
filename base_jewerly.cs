@@ -32,7 +32,7 @@ namespace JewelryDateBase
         //сохранить бд
         public void SaveDB(string name)
         {
-            ///Почитать
+            
             using (StreamWriter sw = new StreamWriter(name, false, System.Text.Encoding.Unicode))
             {
                 foreach (Jewerly s in jewerlys)
