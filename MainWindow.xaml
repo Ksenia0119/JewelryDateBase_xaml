@@ -40,8 +40,8 @@
         <Button x:Name="Button_Save" Content="Сохранить" HorizontalAlignment="Left" Margin="129,20,0,0" VerticalAlignment="Top" Click="Button_Save_Click" Width="70" Grid.Column="2" Height="20"/>
         <DataGrid x:Name="datagrid" d:ItemsSource="{d:SampleData ItemCount=0}" Margin="7,53,54,19" Grid.ColumnSpan="2" Grid.Column="1"/>
         <Button x:Name="Button_Load" Content=" Открыть" HorizontalAlignment="Left" Margin="54,20,0,0" VerticalAlignment="Top" Width="70" Click="Button_Load_Click" Grid.Column="2" Height="20"/>
-        <Button x:Name="Button_Delete" Content="Удалить " HorizontalAlignment="Left" Margin="204,20,0,0" VerticalAlignment="Top" Click="Button_Delete_Click" Grid.Column="2" RenderTransformOrigin="-0.928,0.363" Width="70" Height="20"/>
-        <Button x:Name="Button_Delete_All" Content="Удалить базу" HorizontalAlignment="Left" Margin="280,20,0,0" VerticalAlignment="Top" Width="70" Click="Button_Delete_All_Click" Grid.Column="2" Height="20"/>
-        <Button x:Name="Button_Sort_Name" Content="Сортировать&#xD;&#xA;" HorizontalAlignment="Left" Margin="355,20,0,0" VerticalAlignment="Top" Click="Button_Sort_Name_Click" Grid.Column="2" Width="70" Height="20"/>
+        <Button x:Name="Button_Delete" Content="Удалить " HorizontalAlignment="Left" Margin="280,20,0,0" VerticalAlignment="Top" Click="Button_Delete_Click" Grid.Column="2" RenderTransformOrigin="-0.928,0.363" Width="70" Height="20"/>
+        <Button x:Name="Button_Delete_All" Content="Удалить базу" HorizontalAlignment="Left" Margin="355,20,0,0" VerticalAlignment="Top" Width="70" Click="Button_Delete_All_Click" Grid.Column="2" Height="20" RenderTransformOrigin="0.014,0.742"/>
+        <Button x:Name="Button_Sort_Name" Content="Сортировать&#xD;&#xA;" HorizontalAlignment="Left" Margin="205,20,0,0" VerticalAlignment="Top" Click="Button_Sort_Name_Click" Grid.Column="2" Width="70" Height="20"/>
     </Grid>
 </Window>

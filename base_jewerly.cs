@@ -13,13 +13,13 @@ using System.Windows.Media.Media3D;
 
 namespace JewelryDateBase
 { //классс для работы с бд
-    public class base_jewerly
+    public class BaseJewerly
     {
         // коллекция jewerlys объектов типа Jewerly
         public ObservableCollection<Jewerly> jewerlys;
 
        // конструктор
-        public base_jewerly()
+        public BaseJewerly()
         {
             jewerlys = new ObservableCollection<Jewerly>();
         }

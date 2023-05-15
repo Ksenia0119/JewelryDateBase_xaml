@@ -27,8 +27,8 @@ namespace JewelryDateBase
         ///поле хранит имя файла для работы 
         public string filename = "";
 
-        ///cсылка на объект класса base_jewerly
-        public base_jewerly jew = new base_jewerly();
+        ///cсылка на объект класса BaseJewerly
+        public BaseJewerly jew = new BaseJewerly();
 
        // Конструктор класса MainWindow
         public MainWindow()

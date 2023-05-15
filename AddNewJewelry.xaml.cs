@@ -136,7 +136,7 @@ namespace JewelryDateBase
             //}
             //Объект mainForm  ссылается на главную форму
             MainWindow mainForm = this.Owner as MainWindow;
-            base_jewerly Jw = new base_jewerly();
+            BaseJewerly Jw = new BaseJewerly();
 
             if (check_input())
             {
