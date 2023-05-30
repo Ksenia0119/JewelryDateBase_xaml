@@ -1,4 +1,6 @@
-﻿///реализация простой базы данных ювелирных изделии
+﻿
+using System;
+///реализация простой базы данных ювелирных изделии
 ///author Maltseva K.V.
 
 namespace JewelryDateBase
@@ -14,7 +16,7 @@ namespace JewelryDateBase
         double price;       ///Цена
 
 
-        //Конструктор класса
+        //Конструкторы класса
         public Jewerly(string name, string type, string composition, double weight, double price)
 
         {
@@ -25,35 +27,85 @@ namespace JewelryDateBase
             this.price = price;
         }
 
+        public Jewerly()
+        {
+            name = "";
+            type = "";
+            composition = "";
+            weight = 0;
+            price = 0;
+        }
+
         //задать и получить Название
         public string Название
         {
             get { return name; }
-            set { name = value; }
+            set {
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Название не может быть пустым");
+                }
+                name = value;
+            }
         }
+
+        
         //задать и получить Тип
         public string Тип
         {
             get { return type; }
-            set { type = value; }
+            set {
+                
+                    if (string.IsNullOrEmpty(value))
+                    {
+                        throw new ArgumentException("Тип не может быть пустым");
+                    }
+                 type = value;
+                }
+            
         }
+
         //задать и получить Состав
         public string Состав
         {
             get { return composition; }
-            set { composition = value; }
+            set
+            {
+
+                if (string.IsNullOrEmpty(value))
+                {
+                    throw new ArgumentException("Состав не может быть пустым");
+                }
+                composition = value;
+            }
         }
         //задать и получить Вес
         public double Вес
         {
             get { return weight; }
-            set { weight = value; }
-        }
+            set
+            {
+               
+               if (value <= 0)
+                 {
+                   throw new ArgumentException("Вес не может быть нулевым");
+                 }
+               weight = value;
+             }
+         }
         //задать и получить Цена
         public double Цена
         {
             get { return price; }
-            set { price = value; }
+            set
+            {
+
+                if (value <= 0)
+                {
+                    throw new ArgumentException("Цена не может быть нулевым");
+                }
+                price = value;
+            }
         }
 
 

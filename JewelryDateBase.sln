@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewelryDateBase", "JewelryD
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup_JewerlyDataBase", "Setup_JewerlyDataBase\Setup_JewerlyDataBase.vdproj", "{121CE2D2-1BDC-4E1E-9DF5-B6139E8BC259}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JewelryDateBaseTests", "..\JewelryDateBaseTests\JewelryDateBaseTests.csproj", "{9B5D6CB2-C902-40ED-BAC7-AFDECF7A8871}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{0BF706EE-FDB6-43C9-B386-E38E5ACC28BD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{121CE2D2-1BDC-4E1E-9DF5-B6139E8BC259}.Debug|Any CPU.ActiveCfg = Debug
 		{121CE2D2-1BDC-4E1E-9DF5-B6139E8BC259}.Release|Any CPU.ActiveCfg = Release
+		{9B5D6CB2-C902-40ED-BAC7-AFDECF7A8871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B5D6CB2-C902-40ED-BAC7-AFDECF7A8871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B5D6CB2-C902-40ED-BAC7-AFDECF7A8871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B5D6CB2-C902-40ED-BAC7-AFDECF7A8871}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
