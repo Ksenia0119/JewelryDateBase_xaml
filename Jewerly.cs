@@ -37,7 +37,7 @@ namespace JewelryDateBase
         }
 
         //задать и получить Название
-        public string Название
+        public string Name
         {
             get { return name; }
             set {
@@ -51,7 +51,7 @@ namespace JewelryDateBase
 
         
         //задать и получить Тип
-        public string Тип
+        public string Type
         {
             get { return type; }
             set {
@@ -66,7 +66,7 @@ namespace JewelryDateBase
         }
 
         //задать и получить Состав
-        public string Состав
+        public string Composition
         {
             get { return composition; }
             set
@@ -80,7 +80,7 @@ namespace JewelryDateBase
             }
         }
         //задать и получить Вес
-        public double Вес
+        public double Weight
         {
             get { return weight; }
             set
@@ -88,13 +88,13 @@ namespace JewelryDateBase
                
                if (value <= 0)
                  {
-                   throw new ArgumentException("Вес не может быть нулевым");
+                   throw new ArgumentException("Вес не может быть нулевым или отрицательным");
                  }
                weight = value;
              }
          }
         //задать и получить Цена
-        public double Цена
+        public double Price
         {
             get { return price; }
             set
@@ -102,7 +102,7 @@ namespace JewelryDateBase
 
                 if (value <= 0)
                 {
-                    throw new ArgumentException("Цена не может быть нулевым");
+                    throw new ArgumentException("Цена не может быть нулевой или отрицательной");
                 }
                 price = value;
             }
